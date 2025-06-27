@@ -26,7 +26,7 @@ Below Steps needs to be followed:
 
     helm repo add grafana https://grafana.github.io/helm-charts
     helm repo update
-    helm install k6-operator grafana/k6-operator
+    helm upgrade --install k6-operator grafana/k6-operator
 
     kubectl apply -f k6-test-script-configmap.yaml
     kubectl apply -f k6-test.yaml
