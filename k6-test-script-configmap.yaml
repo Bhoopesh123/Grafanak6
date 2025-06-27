@@ -22,7 +22,7 @@ data:
     };
 
     export default function () {
-      let res = http.get('https://test.k6.io');
+      let res = http.get('http://petclinic.monitoring.svc.cluster.local:80');
       check(res, {
         'is status 200': (r) => r.status === 200,
       });
